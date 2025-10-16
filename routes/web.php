@@ -12,3 +12,4 @@ Route::get('/catalogue', [ProductController::class, 'catalogue'])->name('catalog
 Route::get('/', function () {
     return view('welcome');
 });
+
