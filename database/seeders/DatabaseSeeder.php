@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('admin123'),
         ]);
 
+        
         // Seed categories and products
         $this->call([
             CategorySeeder::class,
