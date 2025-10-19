@@ -99,7 +99,7 @@
 
 
 <!-- Call to Action -->
-<section class="bg-slate-900 text-white py-16">
+<section class="bg-gradient-to-r from-slate-700 to-slate-900 text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">
             Tidak Menemukan yang Anda Cari?
