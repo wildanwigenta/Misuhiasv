@@ -44,9 +44,9 @@
                                 </span>
                             </div>
 
-                            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                            <div class="absolute inset-0 bg-slate-400/0 group-hover:bg-slate-400/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
                                 <a href="{{ route('products.show', $product->slug) }}"
-                                   class="bg-white text-slate-900 hover:bg-blue-50 font-bold py-2 px-4 rounded transition duration-300">
+                                class="bg-white text-slate-900 hover:bg-blue-50 font-bold py-2 px-4 rounded transition duration-300">
                                     Lihat Detail
                                 </a>
                             </div>
