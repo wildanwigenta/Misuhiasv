@@ -35,10 +35,10 @@ class ProductResource extends Resource
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('slug')
-                    ->required()
-                    ->maxLength(255)
-                    ->unique(ignoreRecord: true),
+                // Forms\Components\TextInput::make('slug')
+                //     ->required()
+                //     ->maxLength(255)
+                //     ->unique(ignoreRecord: true),
                 Forms\Components\Textarea::make('description')
                     ->required()
                     ->rows(4)

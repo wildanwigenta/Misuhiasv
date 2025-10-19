@@ -107,7 +107,7 @@
     </footer>
     
     <!-- Product Detail Modal -->
-    <div x-data="{ showModal: false, product: null }" 
+    {{-- <div x-data="{ showModal: false, product: null }" 
          x-show="showModal" 
          x-cloak
          @keydown.escape.window="showModal = false"
@@ -171,7 +171,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     
     <style>
         [x-cloak] { display: none !important; }
