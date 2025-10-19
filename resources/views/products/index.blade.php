@@ -4,7 +4,7 @@
 
 @section('content')
 <!-- Page Header -->
-<section class="bg-blue-900 text-white py-16">
+<section class="bg-slate-400 text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
             <h1 class="text-4xl md:text-5xl font-bold mb-4">
@@ -40,7 +40,7 @@
                             
                             <!-- Category Badge -->
                             <div class="absolute top-4 right-4">
-                                <span class="bg-blue-900 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                                <span class="bg-slate-900 text-white px-2 py-1 rounded-full text-xs font-semibold">
                                     {{ $product->category->name }}
                                 </span>
                             </div>
@@ -48,7 +48,7 @@
                             <!-- Quick View Overlay -->
                             <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
                                 <button @click="$dispatch('product-modal', {{ $product->toJson() }})" 
-                                        class="bg-white text-blue-900 hover:bg-blue-50 font-bold py-2 px-4 rounded transition duration-300">
+                                        class="bg-white text-slate-900 hover:bg-blue-50 font-bold py-2 px-4 rounded transition duration-300">
                                     Lihat Detail
                                 </button>
                             </div>
@@ -64,12 +64,12 @@
                             </p>
                             
                             <div class="flex justify-between items-center">
-                                <span class="text-xl font-bold text-blue-900">
+                                <span class="text-xl font-bold text-slate-900">
                                     Rp {{ number_format($product->price, 0, ',', '.') }}
                                 </span>
                                 
                                 <button @click="$dispatch('product-modal', {{ $product->toJson() }})" 
-                                        class="bg-blue-900 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded text-sm transition duration-300">
+                                        class="bg-slate-900 hover:bg-slate-800 text-white font-bold py-2 px-4 rounded text-sm transition duration-300">
                                     Detail
                                 </button>
                             </div>
@@ -93,7 +93,7 @@
                 <h3 class="text-2xl font-medium text-gray-900 mb-4">Belum Ada Produk</h3>
                 <p class="text-gray-500 mb-8">Produk akan segera hadir. Silakan kembali lagi nanti atau lihat katalog kami.</p>
                 <a href="{{ route('catalogue') }}" 
-                   class="bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg transition duration-300 inline-block">
+                   class="bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 px-6 rounded-lg transition duration-300 inline-block">
                     Lihat Katalog
                 </a>
             </div>
@@ -102,7 +102,7 @@
 </section>
 
 <!-- Call to Action -->
-<section class="bg-blue-900 text-white py-16">
+<section class="bg-slate-900 text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">
             Tidak Menemukan yang Anda Cari?

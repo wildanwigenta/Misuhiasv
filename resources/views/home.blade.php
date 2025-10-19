@@ -3,38 +3,39 @@
 @section('title', 'Home - Gaya Simpel, Kualitas Premium')
 
 @section('content')
+
+<!-- Hero Image/Banner -->
+<div class="relative">
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent"></div>
+    <img src="/images/hero.png" 
+            alt="Banner Kaos" 
+            class="w-full h-96 object-cover">
+</div>
+
 <!-- Hero Section -->
-<section class="relative bg-gradient-to-r from-blue-900 to-blue-700 text-white">
+<section class="relative bg-gradient-to-r from-slate-900 to-slate-700 text-white">
     <div class="absolute inset-0 bg-black opacity-20"></div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div class="text-center">
             <h1 class="text-4xl md:text-6xl font-bold mb-6">
-                Gaya Simpel, <span class="text-blue-300">Kualitas Premium</span>
+                Gaya Simpel, <span class="text-slate-300">Kualitas Premium</span>
             </h1>
-            <p class="text-xl md:text-2xl mb-8 text-blue-100">
+            <p class="text-xl md:text-2xl mb-8 text-slate-100">
                 Temukan koleksi kaos terbaik dengan desain yang menarik dan bahan berkualitas tinggi
             </p>
             <div class="space-x-4">
                 <a href="{{ route('products.index') }}" 
-                   class="bg-white text-blue-900 hover:bg-blue-50 font-bold py-3 px-8 rounded-lg transition duration-300 inline-block">
+                   class="bg-white text-slate-900 hover:bg-slate-50 font-bold py-3 px-8 rounded-lg transition duration-300 inline-block">
                     Lihat Produk
                 </a>
                 <a href="{{ route('catalogue') }}" 
-                   class="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-bold py-3 px-8 rounded-lg transition duration-300 inline-block">
+                   class="border-2 border-white text-white hover:bg-white hover:text-slate-900 font-bold py-3 px-8 rounded-lg transition duration-300 inline-block">
                     Katalog
                 </a>
             </div>
         </div>
     </div>
-    
-    <!-- Hero Image/Banner -->
-    <div class="relative">
-        <div class="absolute inset-0 bg-gradient-to-t from-blue-900 to-transparent"></div>
-        <img src="/images/hero-banner.jpg" 
-             alt="Banner Kaos" 
-             class="w-full h-96 object-cover"
-             onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDgwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI4MDAiIGhlaWdodD0iNDAwIiBmaWxsPSIjMUU0MDc4Ii8+Cjx0ZXh0IHg9IjQwMCIgeT0iMjAwIiBmaWxsPSJ3aGl0ZSIgZm9udC1zaXplPSIyNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPktBT1MgUFJFTUlVTTwvdGV4dD4KPC9zdmc+'">
-    </div>
+
 </section>
 
 <!-- Featured Products Section -->
@@ -59,7 +60,7 @@
                                  class="w-full h-64 object-cover"
                                  onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDMwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjNGNEY2Ii8+Cjx0ZXh0IHg9IjE1MCIgeT0iMTUwIiBmaWxsPSIjOUI5QjlCIiBmb250LXNpemU9IjE2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+S0FPUzwvdGV4dD4KPC9zdmc+'">
                             <div class="absolute top-4 right-4">
-                                <span class="bg-blue-900 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                                <span class="bg-slate-900 text-white px-2 py-1 rounded-full text-xs font-semibold">
                                     {{ $product->category->name }}
                                 </span>
                             </div>
@@ -75,12 +76,12 @@
                             </p>
                             
                             <div class="flex justify-between items-center">
-                                <span class="text-2xl font-bold text-blue-900">
+                                <span class="text-2xl font-bold text-slate-900">
                                     Rp {{ number_format($product->price, 0, ',', '.') }}
                                 </span>
                                 
                                 <button @click="$dispatch('product-modal', {{ $product->toJson() }})" 
-                                        class="bg-blue-900 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded transition duration-300">
+                                        class="bg-slate-900 hover:bg-slate-800 text-white font-bold py-2 px-4 rounded transition duration-300">
                                     Detail
                                 </button>
                             </div>
@@ -91,7 +92,7 @@
             
             <div class="text-center mt-12">
                 <a href="{{ route('products.index') }}" 
-                   class="bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-lg transition duration-300 inline-block">
+                   class="bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 px-8 rounded-lg transition duration-300 inline-block">
                     Lihat Semua Produk
                 </a>
             </div>
@@ -120,7 +121,7 @@
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="text-center">
-                <div class="bg-blue-900 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <div class="bg-slate-900 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                     </svg>
@@ -130,7 +131,7 @@
             </div>
             
             <div class="text-center">
-                <div class="bg-blue-900 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <div class="bg-slate-900 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
@@ -140,7 +141,7 @@
             </div>
             
             <div class="text-center">
-                <div class="bg-blue-900 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <div class="bg-slate-900 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
                     </svg>

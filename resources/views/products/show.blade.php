@@ -9,7 +9,7 @@
         <nav class="flex" aria-label="Breadcrumb">
             <ol class="inline-flex items-center space-x-1 md:space-x-3">
                 <li class="inline-flex items-center">
-                    <a href="{{ route('home') }}" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600">
+                    <a href="{{ route('home') }}" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-slate-600">
                         <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
                         </svg>
@@ -21,7 +21,7 @@
                         <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
                         </svg>
-                        <a href="{{ route('products.index') }}" class="ml-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ml-2">Produk</a>
+                        <a href="{{ route('products.index') }}" class="ml-1 text-sm font-medium text-gray-700 hover:text-slate-600 md:ml-2">Produk</a>
                     </div>
                 </li>
                 <li aria-current="page">
@@ -55,7 +55,7 @@
             <div class="mt-10 px-4 sm:px-0 sm:mt-16 lg:mt-0">
                 <!-- Category Badge -->
                 <div class="mb-4">
-                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
+                    <span class="bg-blue-100 text-slate-800 text-sm font-medium px-3 py-1 rounded-full">
                         {{ $product->category->name }}
                     </span>
                 </div>
@@ -67,7 +67,7 @@
 
                 <!-- Price -->
                 <div class="mt-6">
-                    <p class="text-3xl tracking-tight text-blue-900 font-bold">
+                    <p class="text-3xl tracking-tight text-slate-900 font-bold">
                         Rp {{ number_format($product->price, 0, ',', '.') }}
                     </p>
                 </div>
@@ -199,12 +199,12 @@
                             </h3>
                             
                             <div class="flex justify-between items-center">
-                                <span class="text-lg font-bold text-blue-900">
+                                <span class="text-lg font-bold text-slate-900">
                                     Rp {{ number_format($relatedProduct->price, 0, ',', '.') }}
                                 </span>
                                 
                                 <a href="{{ route('products.show', $relatedProduct->slug) }}" 
-                                   class="bg-blue-900 hover:bg-blue-800 text-white font-bold py-1 px-3 rounded text-sm transition duration-300">
+                                   class="bg-slate-900 hover:bg-slate-800 text-white font-bold py-1 px-3 rounded text-sm transition duration-300">
                                     Lihat
                                 </a>
                             </div>

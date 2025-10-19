@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     
-    <title>{{ config('app.name', 'Toko Kaos') }} - @yield('title', 'Gaya Simpel, Kualitas Premium')</title>
+    <title>{{ config('app.name', 'Misuhiasu') }} - @yield('title', 'Gaya Simpel, Kualitas Premium')</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -19,12 +19,12 @@
 </head>
 <body class="font-sans antialiased bg-gray-50">
     <!-- Header -->
-    <header class="bg-blue-900 shadow-lg">
+    <header class="bg-slate-900 shadow-lg">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
                     <a href="{{ route('home') }}" class="text-white text-xl font-bold">
-                        Toko Kaos
+                        Misuhiasu
                     </a>
                 </div>
                 
@@ -73,11 +73,11 @@
     </main>
     
     <!-- Footer -->
-    <footer class="bg-blue-900 text-white">
+    <footer class="bg-slate-900 text-white">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">Toko Kaos</h3>
+                    <h3 class="text-lg font-semibold mb-4">Misuhiasu</h3>
                     <p class="text-blue-200">Gaya Simpel, Kualitas Premium. Temukan koleksi kaos terbaik dengan desain yang menarik dan bahan berkualitas tinggi.</p>
                 </div>
                 
@@ -97,8 +97,8 @@
                 </div>
             </div>
             
-            <div class="border-t border-blue-800 mt-8 pt-8 text-center">
-                <p class="text-blue-200">&copy; {{ date('Y') }} Toko Kaos. All rights reserved.</p>
+            <div class="border-t border-slate-800 mt-8 pt-8 text-center">
+                <p class="text-blue-200">&copy; {{ date('Y') }} Misuhiasu. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -144,7 +144,7 @@
                             
                             <p class="text-sm text-gray-500 mb-4" x-text="product?.description"></p>
                             
-                            <p class="text-2xl font-bold text-blue-900 mb-4" x-text="'Rp ' + (product?.price ? new Intl.NumberFormat('id-ID').format(product.price) : '0')"></p>
+                            <p class="text-2xl font-bold text-slate-900 mb-4" x-text="'Rp ' + (product?.price ? new Intl.NumberFormat('id-ID').format(product.price) : '0')"></p>
                             
                             <div class="flex justify-between">
                                 <button @click="showModal = false" 

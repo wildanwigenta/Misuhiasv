@@ -4,13 +4,13 @@
 
 @section('content')
 <!-- Page Header -->
-<section class="bg-blue-900 text-white py-16">
+<section class="bg-slate-900 text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
             <h1 class="text-4xl md:text-5xl font-bold mb-4">
                 Katalog Produk
             </h1>
-            <p class="text-xl text-blue-200">
+            <p class="text-xl text-slate-200">
                 Jelajahi koleksi kami berdasarkan kategori
             </p>
         </div>
@@ -38,7 +38,7 @@
                             
                             <!-- View All Button -->
                             <a href="{{ route('products.index') }}?category={{ $category->slug }}" 
-                               class="text-blue-900 hover:text-blue-700 font-semibold flex items-center">
+                               class="text-slate-900 hover:text-slate-700 font-semibold flex items-center">
                                 Lihat Semua
                                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -60,11 +60,11 @@
                                         <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
                                             <div class="space-x-2">
                                                 <button @click="$dispatch('product-modal', {{ $product->toJson() }})" 
-                                                        class="bg-white text-blue-900 hover:bg-blue-50 font-bold py-2 px-4 rounded transition duration-300">
+                                                        class="bg-white text-slate-900 hover:bg-slate-50 font-bold py-2 px-4 rounded transition duration-300">
                                                     Quick View
                                                 </button>
                                                 <a href="{{ route('products.show', $product->slug) }}" 
-                                                   class="bg-blue-900 text-white hover:bg-blue-800 font-bold py-2 px-4 rounded transition duration-300">
+                                                   class="bg-slate-900 text-white hover:bg-slate-800 font-bold py-2 px-4 rounded transition duration-300">
                                                     Detail
                                                 </a>
                                             </div>
@@ -90,12 +90,12 @@
                                         </p>
                                         
                                         <div class="flex justify-between items-center">
-                                            <span class="text-xl font-bold text-blue-900">
+                                            <span class="text-xl font-bold text-slate-900">
                                                 Rp {{ number_format($product->price, 0, ',', '.') }}
                                             </span>
                                             
                                             <button @click="$dispatch('product-modal', {{ $product->toJson() }})" 
-                                                    class="bg-blue-900 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded text-sm transition duration-300">
+                                                    class="bg-slate-900 hover:bg-slate-800 text-white font-bold py-2 px-4 rounded text-sm transition duration-300">
                                                 Detail
                                             </button>
                                         </div>
@@ -108,7 +108,7 @@
                         @if($category->products->count() > 8)
                             <div class="text-center mt-8">
                                 <a href="{{ route('products.index') }}?category={{ $category->slug }}" 
-                                   class="bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg transition duration-300 inline-block">
+                                   class="bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 px-6 rounded-lg transition duration-300 inline-block">
                                     Lihat {{ $category->products->count() - 8 }} Produk Lainnya
                                 </a>
                             </div>
@@ -127,7 +127,7 @@
                 <h3 class="text-2xl font-medium text-gray-900 mb-4">Belum Ada Kategori</h3>
                 <p class="text-gray-500 mb-8">Kategori dan produk akan segera hadir. Silakan kembali lagi nanti.</p>
                 <a href="{{ route('home') }}" 
-                   class="bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg transition duration-300 inline-block">
+                   class="bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 px-6 rounded-lg transition duration-300 inline-block">
                     Kembali ke Home
                 </a>
             </div>
@@ -144,7 +144,7 @@
             @foreach($categories as $category)
                 @if($category->products->count() > 0)
                     <a href="#category-{{ $category->slug }}" 
-                       class="bg-blue-100 hover:bg-blue-200 text-blue-900 font-medium py-2 px-4 rounded-lg transition duration-300"
+                       class="bg-slate-100 hover:bg-slate-200 text-slate-900 font-medium py-2 px-4 rounded-lg transition duration-300"
                        onclick="document.querySelector('h2:contains(\"{{ $category->name }}\")').scrollIntoView({behavior: 'smooth'})">
                         {{ $category->name }} ({{ $category->products->count() }})
                     </a>
@@ -156,12 +156,12 @@
 @endif
 
 <!-- Call to Action -->
-<section class="bg-blue-900 text-white py-16">
+<section class="bg-slate-900 text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">
             Tertarik dengan Produk Kami?
         </h2>
-        <p class="text-xl text-blue-200 mb-8">
+        <p class="text-xl text-slate-200 mb-8">
             Hubungi kami sekarang untuk mendapatkan penawaran terbaik
         </p>
         <div class="space-x-4">
@@ -171,7 +171,7 @@
                 Hubungi WhatsApp
             </a>
             <a href="{{ route('products.index') }}" 
-               class="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-bold py-3 px-8 rounded-lg transition duration-300 inline-block">
+               class="border-2 border-white text-white hover:bg-white hover:text-slate-900 font-bold py-3 px-8 rounded-lg transition duration-300 inline-block">
                 Lihat Semua Produk
             </a>
         </div>
