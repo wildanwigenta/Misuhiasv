@@ -63,9 +63,9 @@
                                                         class="bg-white text-slate-900 hover:bg-slate-50 font-bold py-2 px-4 rounded transition duration-300">
                                                     Quick View
                                                 </button>
-                                                <a href="{{ route('products.show', $product->slug) }}" 
-                                                   class="bg-slate-900 text-white hover:bg-slate-800 font-bold py-2 px-4 rounded transition duration-300">
-                                                    Detail
+                                                <a href="{{ route('products.show', $product->slug) }}"
+                                                class="bg-white text-slate-900 hover:bg-blue-50 font-bold py-2 px-4 rounded transition duration-300">
+                                                    Lihat Detail
                                                 </a>
                                             </div>
                                         </div>
@@ -94,10 +94,10 @@
                                                 Rp {{ number_format($product->price, 0, ',', '.') }}
                                             </span>
                                             
-                                            <button @click="$dispatch('product-modal', {{ $product->toJson() }})" 
-                                                    class="bg-slate-900 hover:bg-slate-800 text-white font-bold py-2 px-4 rounded text-sm transition duration-300">
-                                                Detail
-                                            </button>
+                                            <a href="{{ route('products.show', $product->slug) }}"
+                                            class="bg-white text-slate-900 hover:bg-blue-50 font-bold py-2 px-4 rounded transition duration-300">
+                                                Lihat Detail
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
