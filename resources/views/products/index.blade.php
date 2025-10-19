@@ -4,7 +4,7 @@
 
 @section('content')
 <!-- Page Header -->
-<section class="bg-slate-400 text-white py-16">
+<section class="relative bg-gradient-to-r from-slate-900 to-slate-700 text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
             <h1 class="text-4xl md:text-5xl font-bold mb-4">

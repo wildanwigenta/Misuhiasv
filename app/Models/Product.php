@@ -29,7 +29,14 @@ class Product extends Model
         static::creating(function ($product) {
             $product->slug = Str::slug($product->name);
         });
+
+        static::updating(function ($product) {
+            $product->slug = Str::slug($product->name);
+        });
+
     }
+
+    
 
     public function category(): BelongsTo
     {

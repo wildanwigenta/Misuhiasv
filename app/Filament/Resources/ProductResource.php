@@ -34,11 +34,7 @@ class ProductResource extends Resource
                     ]),
                 Forms\Components\TextInput::make('name')
                     ->required()
-                    ->maxLength(255)
-                    ->live(onBlur: true)
-                    ->afterStateUpdated(fn ($state, Forms\Set $set) => 
-                        $set('slug', \Illuminate\Support\Str::slug($state))
-                    ),
+                    ->maxLength(255),
                 Forms\Components\TextInput::make('slug')
                     ->required()
                     ->maxLength(255)

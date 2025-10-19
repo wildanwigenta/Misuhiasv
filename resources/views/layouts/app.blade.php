@@ -19,7 +19,7 @@
 </head>
 <body class="font-sans antialiased bg-gray-50">
     <!-- Header -->
-    <header class="bg-slate-900 shadow-lg">
+    <header class="bg-slate-900 shadow-lg" x-data="{ mobileMenuOpen: false }">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
@@ -42,7 +42,7 @@
                 
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
-                    <button x-data="{ open: false }" @click="open = !open" class="text-white hover:text-blue-200">
+                    <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-white hover:text-blue-200">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
@@ -51,7 +51,10 @@
             </div>
             
             <!-- Mobile menu -->
-            <div x-data="{ open: false }" x-show="open" class="md:hidden">
+            <div x-show="mobileMenuOpen" 
+                 x-transition
+                 @click.away="mobileMenuOpen = false"
+                 class="md:hidden">
                 <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                     <a href="{{ route('home') }}" class="text-white hover:text-blue-200 block px-3 py-2 text-base font-medium">
                         Home
@@ -107,9 +110,11 @@
     <div x-data="{ showModal: false, product: null }" 
          x-show="showModal" 
          x-cloak
+         @keydown.escape.window="showModal = false"
          class="fixed inset-0 z-50 overflow-y-auto"
          @product-modal.window="showModal = true; product = $event.detail">
         <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <!-- Backdrop -->
             <div x-show="showModal" 
                  x-transition:enter="ease-out duration-300"
                  x-transition:enter-start="opacity-0"
@@ -122,6 +127,9 @@
                 <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
             </div>
             
+            <!-- Modal Content -->
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+            
             <div x-show="showModal" 
                  x-transition:enter="ease-out duration-300"
                  x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
@@ -131,9 +139,9 @@
                  x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                  class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
                 
-                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4" x-show="product">
+                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                     <div class="sm:flex sm:items-start">
-                        <div class="w-full">
+                        <div class="w-full" x-show="product">
                             <div class="mb-4">
                                 <img :src="product?.image ? '/storage/' + product.image : '/images/placeholder.jpg'" 
                                      :alt="product?.name" 
@@ -146,15 +154,15 @@
                             
                             <p class="text-2xl font-bold text-slate-900 mb-4" x-text="'Rp ' + (product?.price ? new Intl.NumberFormat('id-ID').format(product.price) : '0')"></p>
                             
-                            <div class="flex justify-between">
+                            <div class="flex justify-between gap-4">
                                 <button @click="showModal = false" 
-                                        class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded transition duration-300">
+                                        class="flex-1 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded transition duration-300">
                                     Tutup
                                 </button>
                                 
-                                <a :href="'https://wa.me/6281234567890?text=Halo, saya tertarik membeli kaos ' + (product?.name || '') + '. Apakah masih tersedia?'" 
+                                <a :href="'https://wa.me/6281234567890?text=Halo, saya tertarik membeli kaos ' + encodeURIComponent(product?.name || '') + '. Apakah masih tersedia?'" 
                                    target="_blank"
-                                   class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+                                   class="flex-1 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded transition duration-300 text-center">
                                     Pesan Sekarang
                                 </a>
                             </div>
