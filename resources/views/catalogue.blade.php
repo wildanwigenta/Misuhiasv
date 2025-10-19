@@ -4,7 +4,7 @@
 
 @section('content')
 <!-- Page Header -->
-<section class="bg-slate-900 text-white py-16">
+<section class="bg-gradient-to-r from-slate-700 to-slate-900 text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
             <h1 class="text-4xl md:text-5xl font-bold mb-4">
@@ -156,7 +156,7 @@
 @endif
 
 <!-- Call to Action -->
-<section class="bg-slate-900 text-white py-16">
+<section class="bg-gradient-to-r from-slate-900 to-slate-700 text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">
             Tertarik dengan Produk Kami?
