@@ -28,6 +28,7 @@
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
+                    <img src="{{ asset('images/logo_c.png') }}"   alt="Misuhiasu Logo"  class="h-12 w-12 mr-2">
                     <a href="{{ route('home') }}" class="text-white text-xl font-bold">
                         Misuhiasu
                     </a>
