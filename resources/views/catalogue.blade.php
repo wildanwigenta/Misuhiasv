@@ -59,10 +59,6 @@
                                         <!-- Quick View Overlay -->
                                         <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
                                             <div class="space-x-2">
-                                                <button @click="$dispatch('product-modal', {{ $product->toJson() }})" 
-                                                        class="bg-white text-slate-900 hover:bg-slate-50 font-bold py-2 px-4 rounded transition duration-300">
-                                                    Quick View
-                                                </button>
                                                 <a href="{{ route('products.show', $product->slug) }}"
                                                 class="bg-white text-slate-900 hover:bg-blue-50 font-bold py-2 px-4 rounded transition duration-300">
                                                     Lihat Detail
@@ -94,9 +90,9 @@
                                                 Rp {{ number_format($product->price, 0, ',', '.') }}
                                             </span>
                                             
-                                            <a href="{{ route('products.show', $product->slug) }}"
-                                            class="bg-white text-slate-900 hover:bg-blue-50 font-bold py-2 px-4 rounded transition duration-300">
-                                                Lihat Detail
+                                            <a href="{{ route('products.show', $product->slug) }}" 
+                                            class="bg-slate-900 hover:bg-slate-800 text-white font-bold py-2 px-4 rounded text-sm transition duration-300">
+                                                Detail
                                             </a>
                                         </div>
                                     </div>
