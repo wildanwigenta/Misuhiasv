@@ -8,7 +8,7 @@
 
     <title>{{ config('app.name', 'Misuhiasu') }} - @yield('title', 'Gaya Simpel, Kualitas Premium')</title>
 
-    <!-- Favicon - Simple Version -->
+    <!-- Favicon -->
     <link rel="icon" href="/images/logo_c.png" type="image/png">
 
     <!-- Fonts -->
